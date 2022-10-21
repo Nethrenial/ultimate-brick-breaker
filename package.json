@@ -1,0 +1,23 @@
+{
+  "name": "lua-platformer",
+  "version": "0.0.1",
+  "description": "A platformer game built on Love2D but written on typescriptToLua",
+  "main": "index.js",
+  "author": "Nethsara Sandeepa Elvitigala",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tstl",
+    "dev": "concurrently \"yarn watch:source\" \"yarn watch:game\"",
+    "watch:source": "tstl --watch",
+    "watch:game": "node ./scripts/watchLuaFile.js"
+  },
+  "devDependencies": {
+    "chokidar": "^3.5.3",
+    "concurrently": "^7.4.0",
+    "love-typescript-definitions": "^0.24.3",
+    "lua-types": "^2.13.0",
+    "typescript": "^4.8.4",
+    "typescript-to-lua": "^1.10.1"
+  }
+}
